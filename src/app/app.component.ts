@@ -25,8 +25,8 @@ const recordList: Record[] = [
 export class AppComponent {
 
   records = recordList;
-  unitsScale   = 250 / 10000;
-  revenueScale = 250 / 50000000;
+  unitsScale   = 100 / 10000;
+  revenueScale = 100 / 50000000;
 
   status(rank: number) {
     if (rank === 1) {

@@ -16,10 +16,10 @@
         >
          <td>{{record.empName}}</td>
          <td>
-           <div class="bar" [ngClass]="status(record.rank)" [style.width.px]="record.units * unitsScale"></div>
+           <div class="bar" [ngClass]="status(record.rank)" [style.width.%]="record.units * unitsScale"></div>
          </td>
          <td>
-           <div class="bar" [ngClass]="status(record.rank)" [style.width.px]="record.totalRevenue * revenueScale"></div>
+           <div class="bar" [ngClass]="status(record.rank)" [style.width.%]="record.totalRevenue * revenueScale"></div>
          </td>
         </tr>
       </tbody>
