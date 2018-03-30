@@ -28,7 +28,7 @@ export class AppComponent {
   unitsScale   = 100 / 10000;
   revenueScale = 100 / 50000000;
 
-  status(rank: number) {
+  status(rank: number): string {
     if (rank === 1) {
       return 'bonus';
     } else if (rank >= 7) {
