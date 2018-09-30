@@ -12,21 +12,22 @@
 
       <tbody>
         <tr *ngFor="let record of records; even as shouldStripe"
-          [class.stripe]="shouldStripe"
-        >
-         <td>{{record.empName}}</td>
-         <td>
-           <div class="bar"
-             [ngClass]="status(record.rank)"
-             [style.width.%]="record.units * unitsScale">
+          [class.stripe]="shouldStripe">
+          <td [ngClass]="regionClass(record)">{{record.empName}}</td>
+          <td>
+            <div class="bar"
+              [class.bonus]="record.rank === 1"
+              [class.fired]="record.rank >= 7"
+              [style.width.%]="record.units * unitsScale">
             </div>
-         </td>
-         <td>
-           <div class="bar"
-             [ngClass]="status(record.rank)"
-             [style.width.%]="record.totalRevenue * revenueScale">
+          </td>
+          <td>
+            <div class="bar"
+              [class.bonus]="record.rank === 1"
+              [class.fired]="record.rank >= 7"
+              [style.width.%]="record.totalRevenue * revenueScale">
             </div>
-         </td>
+          </td>
         </tr>
       </tbody>
     </table>

@@ -20,3 +20,15 @@
 .stripe {
   background-color: #ececec;
 }
+
+.region-eastern {
+  background-color: lightblue;
+}
+
+.region-central {
+  background-color: lightcoral;
+}
+
+.region-western {
+  background-color: lightseagreen;
+}
