@@ -13,7 +13,9 @@
       <tbody>
         <tr *ngFor="let record of records; even as shouldStripe"
           [class.stripe]="shouldStripe">
-          <td [ngClass]="regionClass(record)">{{record.empName}}</td>
+          <!-- If we don't know the class name ahead of time, just using [class] works, but overwrites any static classes -->
+          <!-- <td class="employee-name" [class]="regionClass(record)">{{record.empName}}</td> -->
+          <td class="employee-name" [ngClass]="regionClass(record)">{{record.empName}}</td>
           <td>
             <div class="bar"
               [class.bonus]="record.rank === 1"

@@ -32,3 +32,7 @@
 .region-western {
   background-color: lightseagreen;
 }
+
+.employee-name {
+  font-weight: bold;
+}
