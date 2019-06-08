@@ -8,6 +8,7 @@ interface Record {
   region: string;
 }
 
+// prettier-ignore
 const recordList: Record[] = [
   { empName: 'Cynthia Cunningham', units: 4575.29879815, totalRevenue:  7746739.8278,   rank: 7, region: 'central' },
   { empName: 'Peter Clark',        units: 1030,          totalRevenue:  6448675.309,    rank: 8, region: 'central' },
@@ -24,9 +25,8 @@ const recordList: Record[] = [
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-
   records = recordList;
-  unitsScale   = 100 / 10000;
+  unitsScale = 100 / 10000;
   revenueScale = 100 / 50000000;
 
   // Avoid computation in templates
