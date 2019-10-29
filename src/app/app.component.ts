@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-interface Record {
+interface SaleRecord {
   empName: string;
   units: number;
   totalRevenue: number;
@@ -9,7 +9,7 @@ interface Record {
 }
 
 // prettier-ignore
-const recordList: Record[] = [
+const recordList: SaleRecord[] = [
   { empName: 'Cynthia Cunningham', units: 4575.29879815, totalRevenue:  7746739.8278,   rank: 7, region: 'central' },
   { empName: 'Peter Clark',        units: 1030,          totalRevenue:  6448675.309,    rank: 8, region: 'central' },
   { empName: 'Theresa Soto',       units: 8669.89,       totalRevenue: 37439820.3498,   rank: 2, region: 'central' },
@@ -30,7 +30,7 @@ export class AppComponent {
   revenueScale = 100 / 50000000;
 
   // Avoid computation in templates
-  regionClass(r: Record) {
+  regionClass(r: SaleRecord) {
     return 'region-' + r.region;
   }
 }
