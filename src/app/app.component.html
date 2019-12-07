@@ -1,12 +1,12 @@
 <div class="card">
   <div class="card-content">
     <div class="card-title">Financial Report</div>
-    <table>
+    <table class="financial-report">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Units Sold (millions)</th>
-          <th>Total</th>
+          <th class="employee-column">Name</th>
+          <th class="units-column">Units Sold (millions)</th>
+          <th class="revenue-column">Total</th>
         </tr>
       </thead>
 
@@ -15,8 +15,9 @@
           *ngFor="let record of records; even as shouldStripe"
           [class.stripe]="shouldStripe"
         >
-          <!-- If we don't know the class name ahead of time, just using [class] works, but overwrites any static classes -->
-          <!-- <td class="employee-name" [class]="regionClass(record)">{{record.empName}}</td> -->
+          <!--
+            If we don't know the class name ahead of time, use [ngClass].
+          -->
           <td class="employee-name" [ngClass]="regionClass(record)">
             {{ record.empName }}
           </td>
