@@ -1,6 +1,5 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "defaultProject": "class-and-style-bindings",
   "newProjectRoot": "projects",
   "projects": {
     "class-and-style-bindings": {
