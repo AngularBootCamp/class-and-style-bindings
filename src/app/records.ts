@@ -1,4 +1,4 @@
-import { RegionRecord } from '.https://api.angularbootcamp.com-types';
+import { RegionRecord } from './api-types';
 
 export const regionRecords: RegionRecord[] = [
   {
