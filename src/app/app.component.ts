@@ -1,10 +1,13 @@
+import { NgFor, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { regionRecords } from './records';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  standalone: true,
+  imports: [NgFor, NgClass]
 })
 export class AppComponent {
   regionInfo = regionRecords;
